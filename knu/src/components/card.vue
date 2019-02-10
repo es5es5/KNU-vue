@@ -17,9 +17,7 @@
 
 <script>
 export default {
-
   name: 'card',
-
   props: {
     title: {
       type: String,
@@ -30,6 +28,5 @@ export default {
       default: ''
     }
   }
-
 }
 </script>
