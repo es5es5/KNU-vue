@@ -1,7 +1,12 @@
 <template>
   <div class="main_layout">
     <Header></Header>
-    <Side-Bar></Side-Bar>
+    <el-col :span="4">
+      <Side-Bar></Side-Bar>
+    </el-col>
+    <el-col :span="20">
+      <router-view></router-view>
+    </el-col>
   </div>
 </template>
 
