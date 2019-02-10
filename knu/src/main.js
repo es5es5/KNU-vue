@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import './plugins/axios'
 import './plugins/element'
+import './plugins/magic-grid'
 import App from './App.vue'
 import store from './store'
 import router from './router'
