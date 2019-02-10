@@ -1,18 +1,14 @@
 <template>
-  <div id="main_layout">
-    <h1 class="animated infinite bounce delay-2s">Example</h1>
-    <magic-grid>
-      <card
-        v-for="(post, i) in posts"
-        :key="i"
-        :title="post.title"
-        :body="post.body" />
-    </magic-grid>
+  <div class="main_layout">
+    <Header></Header>
+    <Side-Bar></Side-Bar>
   </div>
 </template>
 
 <script>
-import card from '@/components/Card'
+// import Header from '@/components/Header'
+import Header from '@/components/Header'
+import SideBar from '@/components/SideBar'
 
 export default {
 	name: 'MainLayout',
@@ -20,42 +16,12 @@ export default {
 	mounted () {},
 	destroyed () {},
 	components: {
-    card
+    Header,
+    SideBar
   },
 	filters: {},
 	data () {
-    return {
-      posts: [
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-        {
-          title: 'a',
-          body: 'as'
-        },
-      ]
-    }
+    return {}
   },
 	computed: {},
 	watch: {},
