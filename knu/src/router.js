@@ -3,6 +3,8 @@ import Router from 'vue-router'
 // import Home from './views/Home.vue'
 import MainLayout from '@/components/MainLayout'
 
+import AlbumRoutes from '@/templates/album/album/routes'
+
 Vue.use(Router)
 
 export default new Router({
@@ -12,7 +14,10 @@ export default new Router({
     {
       path: '/',
       name: 'main',
-      component: MainLayout
+      component: MainLayout,
+      children: [
+        ...AlbumRoutes
+      ]
     }
   ]
 })

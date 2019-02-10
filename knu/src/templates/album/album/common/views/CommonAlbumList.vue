@@ -1,6 +1,6 @@
 <template>
   <div id="common_album_list">
-    asdf
+    common album
   </div>
 </template>
 

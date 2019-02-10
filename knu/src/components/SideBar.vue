@@ -15,7 +15,7 @@
 							<i class="el-icon-menu"></i>
 							<span>교수님 자료실</span>
 						</template>
-						<el-menu-item index="1-1">공지사항</el-menu-item>
+						<el-menu-item index="1-1" :route="{ path: '/CommonAlbum' }">공지사항</el-menu-item>
 						<el-menu-item index="1-2">참고자료</el-menu-item>
 					</el-submenu>
 					<el-submenu index="2">
@@ -23,10 +23,10 @@
 							<i class="el-icon-document"></i>
 							<span>주간업무보고서</span>
 						</template>
-						<el-menu-item index="1-1">김동욱</el-menu-item>
-						<el-menu-item index="1-2">김혜진</el-menu-item>
-						<el-menu-item index="1-3">김희진</el-menu-item>
-						<el-menu-item index="1-4">조진우</el-menu-item>
+						<el-menu-item index="2-1">김동욱</el-menu-item>
+						<el-menu-item index="2-2">김혜진</el-menu-item>
+						<el-menu-item index="2-3">김희진</el-menu-item>
+						<el-menu-item index="2-4">조진우</el-menu-item>
 					</el-submenu>
 					<el-submenu index="3">
 						<template slot="title">
@@ -34,12 +34,12 @@
 							<span>우리들 사진첩</span>
 						</template>
 						<el-menu-item-group title="2019년">
-							<el-menu-item index="1-1">신년회</el-menu-item>
-							<el-menu-item index="1-2">MT</el-menu-item>
+							<el-menu-item index="3-1" @click="goCommonAlbum">신년회</el-menu-item>
+							<el-menu-item index="3-2">MT</el-menu-item>
 						</el-menu-item-group>
 						<el-menu-item-group title="2018년">
-							<el-menu-item index="1-1">HOME-COMMING</el-menu-item>
-							<el-menu-item index="1-2">MT</el-menu-item>
+							<el-menu-item index="3-3">HOME-COMMING</el-menu-item>
+							<el-menu-item index="3-4">MT</el-menu-item>
 						</el-menu-item-group>
 					</el-submenu>
 					<el-submenu index="4">
@@ -73,6 +73,9 @@ export default {
 		},
 		handleClose(key, keyPath) {
 			console.log(key, keyPath)
+		},
+		goCommonAlbum () {
+			this.$router.push({name: 'CommonAlbum'})
 		}
 	}
 }
