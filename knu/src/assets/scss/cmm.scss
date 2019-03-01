@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+// Common
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.pull-left { float: left; }
+.pull-right { float: right; }
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.hidden_txt {	font-size: 0 !important; }
+
+// Text
+.txt_red { color: red !important; }
+.txt_orange { color: orange !important; }
+.txt_yellow { color: yellow !important; }
+.txt_green { color: green !important; }
+.txt_blue { color: blue !important; }
+.txt_black { color: #000 !important; }
+.txt_bold { font-weight: bold; }
+
+// Background
+.bg_red { background-color: red !important; }
+.bg_orange { background-color: orange !important; }
+.bg_yellow { background-color: yellow !important; }
+.bg_green { background-color: green !important; }
+.bg_blue { background-color: blue !important; }
+.bg_black { background-color: #000 !important; }

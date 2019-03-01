@@ -8,5 +8,7 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import '@/assets/scss/cmm.scss';
 </style>
+
