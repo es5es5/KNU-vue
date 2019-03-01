@@ -1,6 +1,6 @@
 <template>
   <div id="workspace_loayout">
-    workspacce
+    <router-view/>
   </div>
 </template>
 
