@@ -3,7 +3,11 @@ import Router from 'vue-router'
 // import Home from './views/Home.vue'
 import MainLayout from '@/components/MainLayout'
 
+/* Album */
 import AlbumRoutes from '@/templates/album/album/routes'
+
+/* Member */
+import WorkspaceRoutes from '@/templates/member/workspace/routes'
 
 Vue.use(Router)
 
@@ -16,7 +20,8 @@ export default new Router({
       name: 'main',
       component: MainLayout,
       children: [
-        ...AlbumRoutes
+        ...AlbumRoutes,
+        ...WorkspaceRoutes
       ]
     }
   ]
