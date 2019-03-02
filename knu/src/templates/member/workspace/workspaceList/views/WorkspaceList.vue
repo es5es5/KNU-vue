@@ -2,6 +2,7 @@
     <div class="workspace_list">
       <div>
         <button @click="gridCreate"></button>
+        <el-button type="text" @click="open">Click to open the Message Box</el-button>
       </div>
       <grid-layout
         :layout.sync="gridItems"
@@ -22,7 +23,8 @@
           :h="item.h"
           :i="item.i"
           :static="item.static">
-          {{item.i}}
+          <span>{{item.i}}</span>
+          <button @click="putGridItem(item.i)">Detail</button>
         </grid-item>
       </grid-layout>
     </div>
@@ -49,7 +51,7 @@ export default {
           color: 'bg_orange'
         },
         {
-          x: 0,
+          x: 4,
           y: 0,
           w: 4,
           h: 4,
@@ -58,7 +60,7 @@ export default {
           color: 'bg_green'
         },
         {
-          x: 0,
+          x: 8,
           y: 0,
           w: 4,
           h: 4,
@@ -72,8 +74,8 @@ export default {
 	computed: {},
 	watch: {},
 	methods: {
-    putGridItem () {
-      console.log('sdfasdfasdfasdf')
+    putGridItem (itemId) {
+      alert(itemId)
     },
     gridCreate () {
       this.gridItems.push({
