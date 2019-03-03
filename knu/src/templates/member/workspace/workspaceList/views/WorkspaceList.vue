@@ -2,7 +2,7 @@
     <div class="workspace_list">
       <div>
         <button @click="gridCreate"></button>
-        <el-button type="text" @click="open">Click to open the Message Box</el-button>
+        <sui-button @click.native="showModal">Show Modal</sui-button>
       </div>
       <grid-layout
         :layout.sync="gridItems"
@@ -27,19 +27,27 @@
           <button @click="putGridItem(item.i)">Detail</button>
         </grid-item>
       </grid-layout>
+
+      <!-- Modal -->
+      <modal-grid-item-update :modalInit="modalInit"></modal-grid-item-update>
     </div>
 </template>
 
 <script>
+import ModalGridItemUpdate from '@/templates/member/workspace/workspaceList/components/ModalGridItemUpdate'
+
 export default {
 	name: 'WorkspaceList',
 	created () {},
 	mounted () {},
 	destroyed () {},
-	components: {},
+	components: {
+    ModalGridItemUpdate
+  },
 	filters: {},
 	data () {
     return {
+      modalInit: false,
       gridItems: [
         {
           x: 0,
@@ -74,6 +82,9 @@ export default {
 	computed: {},
 	watch: {},
 	methods: {
+    showModal () {
+      this.modalInit = !this.modalInit;
+    },
     putGridItem (itemId) {
       alert(itemId)
     },

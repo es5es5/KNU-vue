@@ -10,5 +10,6 @@
 
 <style lang="scss">
 @import '@/assets/scss/cmm.scss';
+
 </style>
 
